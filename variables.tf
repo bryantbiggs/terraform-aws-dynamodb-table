@@ -156,6 +156,12 @@ variable "autoscaling_indexes" {
   default     = {}
 }
 
+variable "autoscaling_policy_name_modifier" {
+  description = "Modifier that is prefixed before the autoscaling target resource ID. When importing resources created outside of this module, you may need to set this to `table/`"
+  type        = string
+  default     = ""
+}
+
 variable "table_class" {
   description = "The storage class of the table. Valid values are STANDARD and STANDARD_INFREQUENT_ACCESS"
   type        = string
